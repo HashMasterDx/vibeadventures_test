@@ -19,5 +19,8 @@ export default defineNuxtConfig({
     components: {
       include: ['InputText', 'Button', 'Calendar', 'SelectButton']
     }
+  },
+  experimental:{
+    inlineSSRStyles: false
   }
 });
