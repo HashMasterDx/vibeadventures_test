@@ -48,7 +48,7 @@ function updateDates(value) {
       //Validate if any item is selected on the SelectedButtons
       if (value) {
         //If selected, reduce the dates
-        if (lastDate.value !== 0){
+        if (lastDate.value !== 0 && date.value[1] !== null){
           date.value[1] = reduceDays(date.value[1], lastDate.value)
         }
         //Change the lastDate control Value
@@ -83,6 +83,7 @@ function updateDates(value) {
 
 function calendarChange(calendar){
   if (value.value){
+    lastDate.value = 0
     value.value = null
   }
 }
